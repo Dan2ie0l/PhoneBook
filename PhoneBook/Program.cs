@@ -104,7 +104,7 @@ else if (order == "Ascending")
 
     }
 }
-/*if(criteria == "Surname")
+if(criteria == "Surname" && order == "Ascending")
 {
     var newlist = sort.ToList();
     PhoneBook.PhoneBook.Move(newlist, 1, newlist.Count-1);
@@ -121,10 +121,6 @@ else
     {
         Console.WriteLine(name);
     }
-}*/
-foreach (var name in sort)
-{
-    Console.WriteLine(name);
 }
 
 int i = 1;
