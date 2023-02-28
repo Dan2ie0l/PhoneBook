@@ -11,7 +11,7 @@ string[] lines = File.ReadAllLines(file);
 
 List<PhoneBook.PhoneBook> Phonebook = new();
 
-
+int j = 0;
 
 foreach (string line in lines)
 {
@@ -27,6 +27,7 @@ foreach (string line in lines)
     }
     else
     {
+        j++;
         a.Name = arr[0];
         a.Surname = " ";
         a.Separator = arr[1];
@@ -108,8 +109,13 @@ else if (order == "Ascending")
 var newlist = new List<PhoneBook.PhoneBook>();
 if (criteria == "Surname" && order == "Ascending")
 {
-     newlist = sort.ToList();
-    PhoneBook.PhoneBook.Move(newlist, 0, newlist.Count - 1);
+    newlist = sort.ToList();
+
+    for (int a = 0; a < j; a++)
+    {
+        PhoneBook.PhoneBook.Move(newlist,0,  newlist.Count - 1);
+    }
+
 
     foreach (var name in newlist)
     {
