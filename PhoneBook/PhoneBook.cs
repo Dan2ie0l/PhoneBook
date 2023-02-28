@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace PhoneBook
 {
-    internal class PhoneBook
+    public class PhoneBook
     {
+       public string Name { get; set; }
+       public string Surname { get; set; }
+       public string PhoneNumber { get; set; }
+        public PhoneBook() {
+          
+        }  
+
     }
 }
