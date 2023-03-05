@@ -121,6 +121,13 @@ if (criteria == "Surname" && order == "Ascending")
     {
         Console.WriteLine(name);
     }
+
+    int i = 1;
+    foreach (var item in newlist)
+    {
+        validationMessage += "Line " + i + ": " + item.Validation() + "\n";
+        i++;
+    }
 }
 else
 {
@@ -129,14 +136,15 @@ else
     {
         Console.WriteLine(name);
     }
+
+    int i = 1;
+    foreach (var item in sort)
+    {
+        validationMessage += "Line " + i + ": " + item.Validation() + "\n";
+        i++;
+    }
 }
 
-int i = 1;
-foreach (var item in newlist)
-{
-    validationMessage += "Line " + i + ": " + item.Validation() + "\n";
-    i++;
-}
 Console.WriteLine();
 Console.WriteLine(validationMessage);
 
